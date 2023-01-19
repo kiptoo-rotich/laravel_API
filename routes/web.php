@@ -17,5 +17,3 @@ use App\Http\Controllers\dummyapi;
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get("data",[dummyapi::class,'getData']);

@@ -6,8 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\movie;
 class dummyapi extends Controller
 {
-    function getData()
+    function getData($id=null)
     {
-        return movie::all();
+        return $id?movie::find($id):movie::all();
     }
 }
