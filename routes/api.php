@@ -19,3 +19,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get("list/{id?}",[dummyapi::class,"getData"]);
+
+Route::post("add",[dummyapi::class,'addData']);
+
+Route::put("update",[dummyapi::class,"update"]);
+
+Route::get('search/{name}',[dummyapi::class,'search']);
